@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Brommer - Ihr Friseur in Stuttgart-Vaihingen</title>
+    <meta name="description" content="Salon Brommer - Ihr Friseursalon in Stuttgart-Vaihingen. Professionelle Haarschnitte, Färbungen und Stylings für Damen und Herren. Jetzt Termin online buchen!">
+    <meta name="keywords" content="Friseur Stuttgart, Salon Brommer, Haarschnitt, Balayage, Färben, Styling, Friseur Vaihingen">
+    <meta name="author" content="Salon Brommer">
+    <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://www.salon-brommer.de/">
+</head>
+<body>
+    <!-- Passwortschutz -->
+<div id="pwd-overlay" style="position: fixed; width: 100%; height: 100%; top: 0; left: 0; background: #fff; z-index: 9999999; display: flex; justify-content: center; align-items: center;">
+    <div style="padding: 30px; background: #f8f8f8; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center;">
+      <h2 style="margin-bottom: 20px; color: #333;">Geschützter Bereich</h2>
+      <input type="password" id="pwd" placeholder="Passwort eingeben" 
+             style="padding: 10px; margin: 10px 0; width: 200px; border: 1px solid #ddd; border-radius: 5px;">
+      <br>
+      <button onclick="if(document.getElementById('pwd').value === 'demo2025') {document.getElementById('pwd-overlay').style.display='none';} else {alert('Falsches Passwort!'); document.getElementById('pwd').value = '';}" 
+              style="background: #94748c; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+        Zugang erhalten
+      </button>
+    </div>
+  </div>
+    <!-- Loader Animation -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+ <!-- Aktualisierte Navigation mit getauschten Menüpunkten -->
+<header id="siteHeader">
+    <div class="container header-container">
+        <a href="#" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" style="height: 38px; width: auto;">
+                <!-- Logo Background -->
+                <rect x="0" y="5" width="40" height="40" rx="20" fill="#94748c"/>
+                
+                <!-- Stylized 'B' -->
+                <path d="M10 15 Q10 12, 13 12 L22 12 Q27 12, 27 17 Q27 21, 23 22 Q28 23, 28 28 Q28 33, 23 33 L13 33 Q10 33, 10 30 Z" 
+                      fill="white" stroke="none" />
+                <path d="M15 16 L20 16 Q23 16, 23 19 Q23 22, 20 22 L15 22 Z" fill="#94748c" />
+                <path d="M15 25 L21 25 Q24 25, 24 28 Q24 31, 21 31 L15 31 Z" fill="#94748c" />
+                
+                <!-- Salon Text -->
+                <text x="45" y="26" font-family="'Segoe UI', sans-serif" font-size="18" font-weight="600" fill="#333333">Salon Brommer</text>
+                
+                <!-- Scissors icon -->
+                <g transform="translate(175, 25) rotate(45) scale(0.5)">
+                    <!-- Handles -->
+                    <rect x="-5" y="15" width="10" height="25" rx="5" fill="#94748c" />
+                    <rect x="-5" y="-40" width="10" height="25" rx="5" fill="#94748c" />
+                    
+                    <!-- Blades -->
+                    <path d="M0 15 L-15 0 L0 -15 Z" fill="#94748c" />
+                    <path d="M0 -15 L15 0 L0 15 Z" fill="#94748c" />
+                    
+                    <!-- Connection -->
+                    <circle cx="0" cy="0" r="4" fill="#d8624c" />
+                </g>
+            </svg>
+        </a>
+        <nav>
+            <button class="mobile-toggle" id="menuToggle">☰</button>
+            <ul id="mainMenu">
+                <li><a href="#services">Leistungen</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#testimonials">Bewertungen</a></li>
+                <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#booking" class="button">Termin buchen</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="fade-in">Ihr Stil. Unsere Leidenschaft.</h1>
+            <p class="fade-in" style="transition-delay: 0.2s;">Bei Salon Brommer verwandeln wir nicht nur Haare, sondern schaffen Ihr persönliches Wohlfühlerlebnis.</p>
+            <a href="#booking" class="button fade-in" style="transition-delay: 0.4s;">Jetzt Termin vereinbaren</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2 class="fade-in">Unsere Leistungen</h2>
+            <p class="fade-in" style="transition-delay: 0.1s;">Entdecken Sie unser umfangreiches Angebot an professionellen Haardienstleistungen, die speziell auf Ihre Bedürfnisse zugeschnitten sind.</p>
+            
+            <div class="services-grid">
+                <div class="service-card stagger-item">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=2969&auto=format&fit=crop" alt="Damen-Haarschnitt">
+                    <div class="service-content">
+                        <h3>Damen-Haarschnitt</h3>
+                        <p>Von klassisch bis modern – wir kreieren den perfekten Look, der zu Ihrem Typ passt.</p>
+                        <p><strong>Ab 35 €</strong></p>
+                    </div>
+                </div>
+                
+                <div class="service-card stagger-item" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=2070&auto=format&fit=crop" alt="Herren-Haarschnitt">
+                    <div class="service-content">
+                        <h3>Herren-Haarschnitt</h3>
+                        <p>Präzise Schnitte und moderne Styles für den selbstbewussten Mann.</p>
+                        <p><strong>Ab 25 €</strong></p>
+                    </div>
+                </div>
+                
+                <div class="service-card stagger-item" style="transition-delay: 0.4s;">
+                    <img src="https://plus.unsplash.com/premium_photo-1664050114816-27654e87f725?q=80&w=2940&auto=format&fit=crop" alt="Farbe & Strähnen">
+                    <div class="service-content">
+                        <h3>Farbe & Strähnen</h3>
+                        <p>Ausdrucksstarke Farben und natürlich wirkende Highlights für jeden Haartyp.</p>
+                        <p><strong>Ab 65 €</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section - Neu gestaltet -->
+    <section id="about">
+        <div class="container">
+            <h2 class="text-center fade-in">Über Salon Brommer</h2>
+            
+            <div class="about-intro text-center">
+                <p class="fade-in" style="transition-delay: 0.1s;">Seit über 20 Jahren ist der Salon Brommer eine Institution in Stuttgart-Vaihingen. Wir verbinden traditionelle Handwerkskunst mit modernsten Techniken und Trends.</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-image fade-in" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2074&auto=format&fit=crop" alt="Salon Brommer - Unser Team bei der Arbeit">
+                </div>
+                
+                <div class="about-content fade-in" style="transition-delay: 0.3s;">
+                    <h3>Unsere Philosophie</h3>
+                    <p>Unser Ziel ist es, nicht nur Ihre Haare zu verschönern, sondern Ihnen ein rundum entspannendes Erlebnis zu bieten. In unserem Salon können Sie dem Alltag entfliehen und sich verwöhnen lassen.</p>
+                    <p>Wir verstehen uns als Ihr Partner für Schönheit und Wohlbefinden und nehmen uns Zeit, Ihre individuellen Wünsche und Bedürfnisse zu verstehen.</p>
+                </div>
+            </div>
+            
+            <div class="about-grid reverse">
+                <div class="about-content fade-in" style="transition-delay: 0.4s;">
+                    <h3>Unsere Qualität</h3>
+                    <p>Wir verwenden ausschließlich hochwertige, umweltfreundliche Produkte und legen großen Wert auf kontinuierliche Weiterbildung, um Ihnen stets die besten und aktuellsten Haartrends anbieten zu können.</p>
+                    <p>Unser Team besucht regelmäßig Schulungen und Messen, um auf dem neuesten Stand der Frisurenmode zu bleiben und Ihnen den bestmöglichen Service zu bieten.</p>
+                </div>
+                
+                <div class="about-image fade-in" style="transition-delay: 0.5s;">
+                    <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=2071&auto=format&fit=crop" alt="Qualitätsprodukte im Salon Brommer">
+                </div>
+            </div>
+            
+            <div class="about-gallery">
+                <h3 class="text-center fade-in" style="transition-delay: 0.6s;">Einblicke in unseren Salon</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item fade-in" style="transition-delay: 0.7s;">
+                        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070&auto=format&fit=crop" alt="Salon Brommer - Einrichtung">
+                    </div>
+                    <div class="gallery-item fade-in" style="transition-delay: 0.8s;">
+                        <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?q=80&w=2036&auto=format&fit=crop" alt="Salon Brommer - Kundenberatung">
+                    </div>
+                    <div class="gallery-item fade-in" style="transition-delay: 0.9s;">
+                        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=2069&auto=format&fit=crop" alt="Salon Brommer - Styling">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+<!-- Verbesserte Team Section -->
+<section id="team">
+    <div class="container">
+        <h2 class="fade-in">Unser Team</h2>
+        <p class="fade-in" style="transition-delay: 0.1s;">Lernen Sie unsere talentierten und erfahrenen Stylisten kennen, die Ihnen mit Leidenschaft und Expertise zur Seite stehen.</p>
+        
+        <div class="team-grid">
+            <div class="team-member scale-in">
+                <div class="team-member-image">
+                    <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?q=80&w=1974&auto=format&fit=crop" alt="Marie Brommer">
+                </div>
+                <div class="team-content">
+                    <h3>Marie Brommer</h3>
+                    <span class="position">Inhaberin & Meisterin</span>
+                    <p>Mit über 25 Jahren Erfahrung und einem Auge für zeitlose Eleganz sorgt Marie für die perfekte Balance zwischen Tradition und Trend.</p>
+                </div>
+            </div>
+            
+            <div class="team-member scale-in" style="transition-delay: 0.2s;">
+                <div class="team-member-image">
+                    <img src="https://images.unsplash.com/photo-1567324216289-97cc4134f626?q=80&w=3164&auto=format&fit=crop" alt="Thomas Weber">
+                </div>
+                <div class="team-content">
+                    <h3>Thomas Weber</h3>
+                    <span class="position">Senior Stylist</span>
+                    <p>Thomas ist unser Experte für moderne Herrenschnitte und kreative Farbgestaltungen mit besonderem Gespür für Ihren individuellen Stil.</p>
+                </div>
+            </div>
+            
+            <div class="team-member scale-in" style="transition-delay: 0.4s;">
+                <div class="team-member-image">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop" alt="Sophia Müller">
+                </div>
+                <div class="team-content">
+                    <h3>Sophia Müller</h3>
+                    <span class="position">Coloristin</span>
+                    <p>Sophias Spezialität sind atemberaubende Farbkreationen und Balayage-Techniken, die Ihr Haar zum Strahlen bringen.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="team-cta fade-in" style="transition-delay: 0.6s;">
+            <p>Interessiert an einer Karriere bei uns? Wir suchen regelmäßig nach talentierten Stylisten für unser Team.</p>
+            <a href="#contact" class="button">Kontaktieren Sie uns</a>
+        </div>
+    </div>
+</section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="text-center fade-in">Das sagen unsere Kunden</h2>
+            <p class="text-center fade-in" style="transition-delay: 0.1s; max-width: 800px; margin: 0 auto 40px;">Wir freuen uns über die vielen positiven Rückmeldungen unserer zufriedenen Kunden. Hier finden Sie einige Stimmen aus unserer Community.</p>
+            
+            <div class="testimonials-container">
+                <div class="testimonial-card fade-in" style="transition-delay: 0.2s;">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Seit über 5 Jahren komme ich regelmäßig zum Salon Brommer. Marie versteht genau, was ich möchte, und berät mich auch zu neuen Trends. Die Atmosphäre ist entspannt und professionell zugleich."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop" alt="Kundenfoto" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <p class="testimonial-name">Sabine K.</p>
+                            <p class="testimonial-date">Stammkundin seit 2020</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in" style="transition-delay: 0.3s;">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Thomas hat aus meinen langweiligen Haaren einen echten Hingucker gemacht! Die Strähnen sind perfekt platziert und die Farbe hält deutlich länger als bei meinem vorherigen Friseur. Bestes Preis-Leistungs-Verhältnis."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop" alt="Kundenfoto" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <p class="testimonial-name">Michael W.</p>
+                            <p class="testimonial-date">April 2025</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in" style="transition-delay: 0.4s;">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Als ich für meine Hochzeit einen besonderen Look wollte, hat Sophia mich perfekt beraten. Die Probestylings waren sehr hilfreich und am großen Tag saß jede Strähne. Der komplette Service war einfach wunderbar!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1976&auto=format&fit=crop" alt="Kundenfoto" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <p class="testimonial-name">Laura M.</p>
+                            <p class="testimonial-date">März 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-cta text-center fade-in" style="transition-delay: 0.5s;">
+                <p>Sind Sie auch begeistert von unserem Service? Hinterlassen Sie eine Bewertung auf Google oder Facebook!</p>
+                <div class="first-time-offer">
+                    <div class="offer-badge">10% Rabatt</div>
+                    <h3>Neukunden-Angebot</h3>
+                    <p>Bei Ihrem ersten Besuch erhalten Sie 10% Rabatt auf alle Leistungen. Einfach bei der Buchung "Neukunde" angeben.</p>
+                    <a href="#booking" class="button">Jetzt Termin vereinbaren</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+ <!-- Aktualisierte Gallery Section mit lokalen Bildern -->
+<section id="gallery">
+    <div class="container">
+        <h2 class="text-center fade-in">Unsere Arbeiten</h2>
+        <p class="text-center fade-in" style="transition-delay: 0.1s; max-width: 800px; margin: 0 auto 40px;">Entdecken Sie eine Auswahl unserer Frisuren und Styling-Ergebnisse. Lassen Sie sich inspirieren!</p>
+        
+        <div class="gallery-tabs">
+            <button class="gallery-tab active" data-category="all">Alle</button>
+            <button class="gallery-tab" data-category="women">Damen</button>
+            <button class="gallery-tab" data-category="men">Herren</button>
+            <button class="gallery-tab" data-category="color">Farbe</button>
+            <button class="gallery-tab" data-category="special">Besondere Anlässe</button>
+        </div>
+        
+        <div class="gallery-container">
+            <!-- Damen (Bob Frisur) -->
+            <div class="gallery-item" data-category="women">
+                <div class="before-after-container">
+                    <img src="images/Bob.png" alt="Vorher und Nachher - Moderner Bob mit Stufen" class="full-image">
+                </div>
+                <div class="gallery-caption">
+                    <h3>Moderner Bob mit Stufen</h3>
+                    <p>Frischer Look mit mehr Volumen und Bewegung</p>
+                </div>
+            </div>
+            
+            <!-- Herren (Fade Cut) -->
+            <div class="gallery-item" data-category="men">
+                <div class="before-after-container">
+                    <img src="images/Fade.png" alt="Vorher und Nachher - Klassischer Fade Cut" class="full-image">
+                </div>
+                <div class="gallery-caption">
+                    <h3>Klassischer Fade Cut</h3>
+                    <p>Präziser Übergang mit texturierter Oberseite</p>
+                </div>
+            </div>
+            
+            <!-- Farbe (Balayage) -->
+            <div class="gallery-item" data-category="color">
+                <div class="before-after-container">
+                    <img src="images/Balayage.png" alt="Vorher und Nachher - Balayage in warmen Karamell-Tönen" class="full-image">
+                </div>
+                <div class="gallery-caption">
+                    <h3>Balayage in Karamell-Tönen</h3>
+                    <p>Natürlicher Farbverlauf für mehr Dimension</p>
+                </div>
+            </div>
+            
+            <!-- Besondere Anlässe (Hochsteckfrisur) -->
+            <div class="gallery-item" data-category="special">
+                <div class="before-after-container">
+                    <img src="images/Hochsteckfrisur.png" alt="Vorher und Nachher - Elegante Hochsteckfrisur" class="full-image">
+                </div>
+                <div class="gallery-caption">
+                    <h3>Elegante Hochsteckfrisur</h3>
+                    <p>Perfekt für Hochzeiten und besondere Anlässe</p>
+                </div>
+            </div>
+            
+            <!-- Lang auf kurz Transformation -->
+            <div class="gallery-item" data-category="men">
+                <div class="before-after-container">
+                    <img src="images/Transformation.png" alt="Vorher und Nachher - Lang auf kurz Transformation" class="full-image">
+                </div>
+                <div class="gallery-caption">
+                    <h3>Lang auf kurz Transformation</h3>
+                    <p>Mutiger Schnitt für einen frischen Start</p>
+                </div>
+            </div>
+            
+            <!-- Platinblond Transformation -->
+            <div class="gallery-item" data-category="color">
+                <div class="before-after-container">
+                    <img src="images/Platinblond.png" alt="Vorher und Nachher - Platinblond Transformation" class="full-image">
+                </div>
+                <div class="gallery-caption">
+                    <h3>Platinblond Transformation</h3>
+                    <p>Professionelle Aufhellung mit Farbkorrektur</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <a href="#" class="button load-more-button fade-in" style="transition-delay: 0.5s;">Mehr Bilder laden</a>
+        </div>
+    </div>
+</section>
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="text-center fade-in">Häufig gestellte Fragen</h2>
+            <p class="text-center fade-in" style="transition-delay: 0.1s; max-width: 800px; margin: 0 auto 40px;">Hier finden Sie Antworten auf die häufigsten Fragen rund um unseren Salon und unsere Dienstleistungen.</p>
+            
+            <div class="faq-item fade-in" style="transition-delay: 0.2s;">
+                <div class="faq-question">
+                    <h3>Brauche ich einen Termin oder kann ich auch spontan vorbeikommen?</h3>
+                    <div class="faq-toggle">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Wir empfehlen grundsätzlich eine Terminvereinbarung, um Wartezeiten zu vermeiden. Sollten Sie dennoch spontan vorbeikommen, versuchen wir natürlich, Sie so schnell wie möglich zu bedienen, können aber leider keine Garantie geben. Über unsere Online-Buchung können Sie rund um die Uhr Termine vereinbaren.</p>
+                </div>
+            </div>
+                
+                <div class="faq-item fade-in" style="transition-delay: 0.3s;">
+                    <div class="faq-question">
+                        <h3>Wie viel Zeit sollte ich für meinen Besuch einplanen?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Die Dauer hängt von der gewünschten Dienstleistung ab: Ein Haarschnitt dauert in der Regel 30-60 Minuten, während Colorierungen oder Balayage-Techniken zwischen 2-3 Stunden in Anspruch nehmen können. Bei der Terminbuchung wird Ihnen die ungefähre Dauer angezeigt. Für Beratungsgespräche vor aufwendigeren Behandlungen planen wir zusätzliche Zeit ein.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in" style="transition-delay: 0.4s;">
+                    <div class="faq-question">
+                        <h3>Welche Zahlungsmöglichkeiten bieten Sie an?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Wir akzeptieren Barzahlung, EC-Karte und alle gängigen Kreditkarten. Leider ist eine Zahlung auf Rechnung nicht möglich.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in" style="transition-delay: 0.5s;">
+                    <div class="faq-question">
+                        <h3>Was passiert, wenn ich meinen Termin kurzfristig absagen muss?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Wir bitten um eine Absage mindestens 24 Stunden vor dem vereinbarten Termin. Bei kurzfristigeren Absagen oder Nichterscheinen behalten wir uns vor, eine Ausfallgebühr in Höhe von 50% des geplanten Services zu berechnen. Bei Krankheit mit ärztlichem Attest entfällt diese Gebühr selbstverständlich.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in" style="transition-delay: 0.6s;">
+                    <div class="faq-question">
+                        <h3>Welche Haarprodukte verwenden Sie in Ihrem Salon?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Wir arbeiten ausschließlich mit hochwertigen, professionellen Produkten renommierter Marken. Alle unsere Pflegeprodukte und Colorationen sind dermatologisch getestet und möglichst umweltfreundlich. Die von uns verwendeten Produkte können Sie auch bei uns im Salon erwerben – unsere Stylisten beraten Sie gerne zu den passenden Produkten für Ihren Haartyp.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in" style="transition-delay: 0.7s;">
+                    <div class="faq-question">
+                        <h3>Muss ich meine Haare vor dem Termin waschen?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nein, es ist nicht notwendig, Ihre Haare vor dem Besuch zu waschen. Bei den meisten Behandlungen waschen wir Ihre Haare ohnehin im Salon. Bei Colorationen ist es sogar besser, wenn die Haare nicht frisch gewaschen sind, da die natürliche Sebumschicht die Kopfhaut während der Behandlung schützen kann.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="text-center faq-more fade-in" style="transition-delay: 0.8s;">Haben Sie eine Frage, die hier nicht beantwortet wird? <a href="#contact">Kontaktieren Sie uns</a> – wir helfen Ihnen gerne weiter!</p>
+        </div>
+    </section>
+
+    <!-- Booking Section - Mit Kalender-Buchungssystem -->
+    <section id="booking">
+        <div class="container">
+            <h2 class="text-center fade-in">Termin vereinbaren</h2>
+            <p class="text-center fade-in" style="transition-delay: 0.1s; max-width: 800px; margin: 0 auto 40px;">Buchen Sie ganz einfach Ihren Wunschtermin online. Wählen Sie zunächst einen Service, dann einen Tag und anschließend eine verfügbare Uhrzeit.</p>
+            
+            <div class="booking-container">
+                <!-- Step 1: Service Selection -->
+                <div class="booking-step" id="step-1">
+                    <h3>1. Service auswählen</h3>
+                    <div class="services-selection">
+                        <div class="service-option" data-service="damen" data-duration="60">
+                            <div class="service-icon">✂️</div>
+                            <div class="service-details">
+                                <h4>Damen-Haarschnitt</h4>
+                                <p>Schnitt, Styling, Beratung</p>
+                                <p class="service-price">ab 35 €</p>
+                                <p class="service-duration">ca. 60 Minuten</p>
+                            </div>
+                        </div>
+                        
+                        <div class="service-option" data-service="herren" data-duration="30">
+                            <div class="service-icon">💇‍♂️</div>
+                            <div class="service-details">
+                                <h4>Herren-Haarschnitt</h4>
+                                <p>Präziser Schnitt nach Wunsch</p>
+                                <p class="service-price">ab 25 €</p>
+                                <p class="service-duration">ca. 30 Minuten</p>
+                            </div>
+                        </div>
+                        
+                        <div class="service-option" data-service="farbe" data-duration="120">
+                            <div class="service-icon">🎨</div>
+                            <div class="service-details">
+                                <h4>Farbe & Strähnen</h4>
+                                <p>Inklusive Beratung und Styling</p>
+                                <p class="service-price">ab 65 €</p>
+                                <p class="service-duration">ca. 120 Minuten</p>
+                            </div>
+                        </div>
+                        
+                        <div class="service-option" data-service="kinder" data-duration="30">
+                            <div class="service-icon">👧</div>
+                            <div class="service-details">
+                                <h4>Kinder-Haarschnitt</h4>
+                                <p>Für Kinder bis 12 Jahre</p>
+                                <p class="service-price">ab 20 €</p>
+                                <p class="service-duration">ca. 30 Minuten</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="navigation-buttons">
+                        <button class="button button-next" id="next-to-step-2" disabled>Weiter zur Terminauswahl</button>
+                    </div>
+                </div>
+                
+                <!-- Step 2: Calendar View -->
+                <div class="booking-step hidden" id="step-2">
+                    <h3>2. Termin auswählen</h3>
+                    
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <button id="prev-month">&lt;</button>
+                            <h4 id="month-year">April 2025</h4>
+                            <button id="next-month">&gt;</button>
+                        </div>
+                        
+                        <div class="weekdays">
+                            <div>Mo</div>
+                            <div>Di</div>
+                            <div>Mi</div>
+                            <div>Do</div>
+                            <div>Fr</div>
+                            <div>Sa</div>
+                            <div>So</div>
+                        </div>
+                        
+                        <div class="calendar-days" id="calendar-days">
+                            <!-- Days will be dynamically populated with JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="navigation-buttons">
+                        <button class="button button-back" id="back-to-step-1">Zurück zum Service</button>
+                        <button class="button button-next" id="next-to-step-3" disabled>Weiter zur Zeitauswahl</button>
+                    </div>
+                </div>
+                
+                <!-- Step 3: Time Selection -->
+                <div class="booking-step hidden" id="step-3">
+                    <h3>3. Uhrzeit auswählen</h3>
+                    
+                    <div class="selected-date-display">
+                        <p>Gewählter Service: <span id="selected-service-display">-</span></p>
+                        <p>Gewähltes Datum: <span id="selected-date-display">-</span></p>
+                    </div>
+                    
+                    <div class="time-slots" id="time-slots">
+                        <!-- Time slots will be dynamically populated with JavaScript -->
+                    </div>
+                    
+                    <div class="navigation-buttons">
+                        <button class="button button-back" id="back-to-step-2">Zurück zum Kalender</button>
+                        <button class="button button-next" id="next-to-step-4" disabled>Weiter zur Bestätigung</button>
+                    </div>
+                </div>
+                
+                <!-- Step 4: Customer Details & Confirmation -->
+                <div class="booking-step hidden" id="step-4">
+                    <h3>4. Persönliche Daten & Bestätigung</h3>
+                    
+                    <div class="booking-summary">
+                        <h4>Ihre Terminanfrage</h4>
+                        <div class="summary-details">
+                            <p><strong>Service:</strong> <span id="summary-service">-</span></p>
+                            <p><strong>Datum:</strong> <span id="summary-date">-</span></p>
+                            <p><strong>Uhrzeit:</strong> <span id="summary-time">-</span></p>
+                            <p><strong>Dauer:</strong> <span id="summary-duration">-</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="customer-form">
+                        <div class="form-group">
+                            <label for="customer-name">Name <span class="required">*</span></label>
+                            <input type="text" id="customer-name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customer-email">E-Mail <span class="required">*</span></label>
+                            <input type="email" id="customer-email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customer-phone">Telefon <span class="required">*</span></label>
+                            <input type="tel" id="customer-phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customer-notes">Anmerkungen</label>
+                            <textarea id="customer-notes" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="privacy-consent" required>
+                            <label for="privacy-consent">Ich akzeptiere die <a href="#" id="privacy-link-booking">Datenschutzbestimmungen</a> <span class="required">*</span></label>
+                        </div>
+                    </div>
+                    
+                    <div class="navigation-buttons">
+                        <button class="button button-back" id="back-to-step-3">Zurück zur Zeitauswahl</button>
+                        <button class="button" id="submit-booking">Termin verbindlich buchen</button>
+                    </div>
+                </div>
+                
+                <!-- Step 5: Confirmation Screen -->
+                <div class="booking-step hidden" id="step-5">
+                    <div class="confirmation-screen">
+                        <div class="confirmation-icon">✅</div>
+                        <h3>Vielen Dank für Ihre Buchung!</h3>
+                        <p>Wir haben Ihre Terminanfrage erhalten und werden diese schnellstmöglich bestätigen.</p>
+                        <div class="confirmation-details">
+                            <p><strong>Service:</strong> <span id="confirmed-service">-</span></p>
+                            <p><strong>Datum:</strong> <span id="confirmed-date">-</span></p>
+                            <p><strong>Uhrzeit:</strong> <span id="confirmed-time">-</span></p>
+                            <p><strong>Name:</strong> <span id="confirmed-name">-</span></p>
+                        </div>
+                        <p>Eine Bestätigung wurde an Ihre E-Mail-Adresse gesendet.</p>
+                        <button class="button" id="new-booking">Neuen Termin buchen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="text-center fade-in">Kontakt & Anfahrt</h2>
+            <p class="text-center fade-in" style="transition-delay: 0.1s; max-width: 800px; margin: 0 auto 40px;">Wir freuen uns auf Ihren Besuch. Hier finden Sie alle Informationen, wie Sie uns erreichen können.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-method fade-in" style="transition-delay: 0.2s;">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Adresse</h3>
+                            <p>Salon Brommer<br>Musterstraße 123<br>70563 Stuttgart-Vaihingen</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method fade-in" style="transition-delay: 0.3s;">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Telefon</h3>
+                            <p>0711 - 23 45 67 89</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method fade-in" style="transition-delay: 0.4s;">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h3>E-Mail</h3>
+                            <p>info@salon-brommer.de</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method fade-in" style="transition-delay: 0.5s;">
+                        <div class="contact-icon">🕒</div>
+                        <div class="contact-details">
+                            <h3>Öffnungszeiten</h3>
+                            <div class="hours-grid">
+                                <div class="day">Montag</div><div>Geschlossen</div>
+                                <div class="day">Dienstag</div><div>9:00 - 18:00 Uhr</div>
+                                <div class="day">Mittwoch</div><div>9:00 - 18:00 Uhr</div>
+                                <div class="day">Donnerstag</div><div>9:00 - 20:00 Uhr</div>
+                                <div class="day">Freitag</div><div>9:00 - 18:00 Uhr</div>
+                                <div class="day">Samstag</div><div>9:00 - 14:00 Uhr</div>
+                                <div class="day">Sonntag</div><div>Geschlossen</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Karte als iFrame -->
+                <div class="map fade-in" style="transition-delay: 0.6s;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10567.95315535168!2d9.0975423871582!3d48.7335067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799dc5c4e44a1c7%3A0xb04b26db99395314!2sStuttgart-Vaihingen%2C%20Stuttgart!5e0!3m2!1sde!2sde!4v1650123456789!5m2!1sde!2sde" width="100%" height="100%" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Salon Brommer</h3>
+                    <p>Ihr Friseur für Stil und Wohlbefinden in Stuttgart-Vaihingen seit über 20 Jahren.</p>
+                    <p class="contact-quick-info">
+                        <strong>Telefon:</strong> 0711 - 23 45 67 89<br>
+                        <strong>E-Mail:</strong> info@salon-brommer.de
+                    </p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Leistungen</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Damen-Haarschnitt</a></li>
+                        <li><a href="#services">Herren-Haarschnitt</a></li>
+                        <li><a href="#services">Farbe & Strähnen</a></li>
+                        <li><a href="#services">Styling für besondere Anlässe</a></li>
+                        <li><a href="#services">Haarpflege-Behandlungen</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Öffnungszeiten</h3>
+                    <div class="footer-hours">
+                        <div class="footer-day">Montag</div><div>Geschlossen</div>
+                        <div class="footer-day">Dienstag</div><div>9:00 - 18:00 Uhr</div>
+                        <div class="footer-day">Mittwoch</div><div>9:00 - 18:00 Uhr</div>
+                        <div class="footer-day">Donnerstag</div><div>9:00 - 20:00 Uhr</div>
+                        <div class="footer-day">Freitag</div><div>9:00 - 18:00 Uhr</div>
+                        <div class="footer-day">Samstag</div><div>9:00 - 14:00 Uhr</div>
+                        <div class="footer-day">Sonntag</div><div>Geschlossen</div>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Schnellzugriff</h3>
+                    <ul class="footer-links">
+                        <li><a href="#booking">Termin buchen</a></li>
+                        <li><a href="#team">Unser Team</a></li>
+                        <li><a href="#contact">Anfahrt & Kontakt</a></li>
+                        <li><a href="#about">Über uns</a></li>
+                        <li><a href="#" id="haircare-tips-link">Haar-Pflegetipps</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Salon Brommer. Alle Rechte vorbehalten. | <a href="#" id="impressum-link">Impressum</a> | <a href="#" id="privacy-link">Datenschutz</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie-Banner -->
+    <div id="cookie-banner">
+        <p>Diese Website verwendet Cookies, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten. <a href="#" id="privacy-link-cookie">Datenschutzerklärung</a></p>
+        <button id="accept-cookies" class="button">Akzeptieren</button>
+    </div>
+
+    <!-- Zusätzliche Sektionen für Footer-Links -->
+    
+    <!-- Haar-Pflegetipps Sektion -->
+    <div id="haircare-tips" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Haar-Pflegetipps vom Salon Brommer</h2>
+            
+            <div class="tips-container">
+                <div class="tip-item">
+                    <h3>Die richtige Haarpflege im Alltag</h3>
+                    <p>Für gesundes, glänzendes Haar empfehlen wir, nicht täglich zu waschen und lauwarmes statt heißes Wasser zu verwenden. Verwenden Sie Produkte, die auf Ihren Haartyp abgestimmt sind, und föhnen Sie mit niedrigerer Temperatur.</p>
+                </div>
+                
+                <div class="tip-item">
+                    <h3>Pflege für coloriertes Haar</h3>
+                    <p>Coloriertes Haar benötigt besondere Pflege. Verwenden Sie spezielle Shampoos und Conditioner für gefärbtes Haar, um die Farbe länger zu erhalten. Einmal wöchentlich empfehlen wir eine intensive Haarkur.</p>
+                </div>
+                
+                <div class="tip-item">
+                    <h3>Saisonale Haarpflege</h3>
+                    <p>Im Sommer schützen Sie Ihr Haar vor UV-Strahlung und Chlorwasser. Im Winter braucht Ihr Haar zusätzliche Feuchtigkeit gegen Heizungsluft. Bei Fragen zur optimalen Pflege für die jeweilige Jahreszeit beraten wir Sie gerne persönlich.</p>
+                </div>
+            </div>
+            
+            <p class="tip-cta">Für individuelle Pflegetipps besuchen Sie uns im Salon. Unser Team berät Sie gerne zu Produkten, die optimal zu Ihrem Haartyp passen.</p>
+            <button class="button modal-close-button">Schließen</button>
+        </div>
+    </div>
+    
+    <!-- Impressum Modal -->
+    <div id="impressum-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Impressum</h2>
+            
+            <div class="legal-content">
+                <h3>Angaben gemäß § 5 TMG:</h3>
+                <p>
+                    Salon Brommer GmbH<br>
+                    Musterstraße 123<br>
+                    70563 Stuttgart-Vaihingen
+                </p>
+                
+                <h3>Vertreten durch:</h3>
+                <p>Marie Brommer, Geschäftsführerin</p>
+                
+                <h3>Kontakt:</h3>
+                <p>
+                    Telefon: 0711 - 23 45 67 89<br>
+                    E-Mail: info@salon-brommer.de
+                </p>
+                
+                <h3>Registereintrag:</h3>
+                <p>
+                    Eintragung im Handelsregister.<br>
+                    Registergericht: Amtsgericht Stuttgart<br>
+                    Registernummer: HRB 12345
+                </p>
+                
+                <h3>Umsatzsteuer-ID:</h3>
+                <p>
+                    Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:<br>
+                    DE 123456789
+                </p>
+                
+                <h3>Berufsbezeichnung und berufsrechtliche Regelungen:</h3>
+                <p>
+                    Berufsbezeichnung: Friseurmeisterin<br>
+                    Zuständige Kammer: Handwerkskammer Region Stuttgart<br>
+                    Verliehen in: Deutschland
+                </p>
+            </div>
+            
+            <button class="button modal-close-button">Schließen</button>
+        </div>
+    </div>
+    
+    <!-- Datenschutz Modal -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Datenschutzerklärung</h2>
+            
+            <div class="legal-content">
+                <h3>1. Datenschutz auf einen Blick</h3>
+                <h4>Allgemeine Hinweise</h4>
+                <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
+                
+                <h4>Datenerfassung auf unserer Website</h4>
+                <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Die Kontaktdaten können Sie dem Impressum dieser Website entnehmen.</p>
+                
+                <h3>2. Terminbuchung</h3>
+                <p>Wenn Sie über unsere Website einen Termin buchen, erheben wir die von Ihnen eingegebenen Daten wie Name, E-Mail-Adresse und Telefonnummer ausschließlich zum Zweck der Terminverwaltung. Diese Daten werden nicht an Dritte weitergegeben und nur für den Zweck der Kontaktaufnahme bezüglich Ihres Termins verwendet.</p>
+                
+                <h3>3. Ihre Rechte</h3>
+                <p>Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht auf Berichtigung oder Löschung dieser Daten. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese jederzeit widerrufen.</p>
+                
+                <h3>4. Cookies</h3>
+                <p>Unsere Website verwendet Cookies, um Ihnen ein optimales Nutzererlebnis zu bieten. Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und die Ihr Browser speichert. Die meisten der von uns verwendeten Cookies sind so genannte "Session-Cookies". Sie werden nach Ende Ihres Besuchs automatisch gelöscht.</p>
+            </div>
+            
+            <button class="button modal-close-button">Schließen</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
