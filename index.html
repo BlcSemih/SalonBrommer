@@ -2,28 +2,31 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#94748c">
     <title>Salon Brommer - Ihr Friseur in Stuttgart-Vaihingen</title>
     <meta name="description" content="Salon Brommer - Ihr Friseursalon in Stuttgart-Vaihingen. Professionelle Haarschnitte, Färbungen und Stylings für Damen und Herren. Jetzt Termin online buchen!">
     <meta name="keywords" content="Friseur Stuttgart, Salon Brommer, Haarschnitt, Balayage, Färben, Styling, Friseur Vaihingen">
     <meta name="author" content="Salon Brommer">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile-optimizations.css">
     <link rel="canonical" href="https://www.salon-brommer.de/">
 </head>
 <body>
     <!-- Passwortschutz -->
-<div id="pwd-overlay" style="position: fixed; width: 100%; height: 100%; top: 0; left: 0; background: #fff; z-index: 9999999; display: flex; justify-content: center; align-items: center;">
-    <div style="padding: 30px; background: #f8f8f8; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center;">
-      <h2 style="margin-bottom: 20px; color: #333;">Geschützter Bereich</h2>
-      <input type="password" id="pwd" placeholder="Passwort eingeben" 
-             style="padding: 10px; margin: 10px 0; width: 200px; border: 1px solid #ddd; border-radius: 5px;">
-      <br>
-      <button onclick="if(document.getElementById('pwd').value === 'demo2025') {document.getElementById('pwd-overlay').style.display='none';} else {alert('Falsches Passwort!'); document.getElementById('pwd').value = '';}" 
-              style="background: #94748c; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
-        Zugang erhalten
-      </button>
+    <div id="pwd-overlay" style="position: fixed; width: 100%; height: 100%; top: 0; left: 0; background: #fff; z-index: 9999999; display: flex; justify-content: center; align-items: center;">
+        <div style="padding: 30px; background: #f8f8f8; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; width: 90%; max-width: 320px;">
+          <h2 style="margin-bottom: 20px; color: #333;">Geschützter Bereich</h2>
+          <input type="password" id="pwd" placeholder="Passwort eingeben" 
+                 style="padding: 12px; margin: 10px 0; width: 100%; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;">
+          <br>
+          <button onclick="if(document.getElementById('pwd').value === 'demo2025') {document.getElementById('pwd-overlay').style.display='none';} else {alert('Falsches Passwort!'); document.getElementById('pwd').value = '';}" 
+                  style="background: #94748c; color: white; border: none; padding: 12px 20px; border-radius: 5px; cursor: pointer; width: 100%; font-size: 16px;">
+            Zugang erhalten
+          </button>
+        </div>
     </div>
-  </div>
+    
     <!-- Loader Animation -->
     <div class="loader">
         <div class="loader-content">
@@ -32,53 +35,53 @@
     </div>
 
     <!-- Header -->
- <!-- Aktualisierte Navigation mit getauschten Menüpunkten -->
-<header id="siteHeader">
-    <div class="container header-container">
-        <a href="#" class="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" style="height: 38px; width: auto;">
-                <!-- Logo Background -->
-                <rect x="0" y="5" width="40" height="40" rx="20" fill="#94748c"/>
-                
-                <!-- Stylized 'B' -->
-                <path d="M10 15 Q10 12, 13 12 L22 12 Q27 12, 27 17 Q27 21, 23 22 Q28 23, 28 28 Q28 33, 23 33 L13 33 Q10 33, 10 30 Z" 
-                      fill="white" stroke="none" />
-                <path d="M15 16 L20 16 Q23 16, 23 19 Q23 22, 20 22 L15 22 Z" fill="#94748c" />
-                <path d="M15 25 L21 25 Q24 25, 24 28 Q24 31, 21 31 L15 31 Z" fill="#94748c" />
-                
-                <!-- Salon Text -->
-                <text x="45" y="26" font-family="'Segoe UI', sans-serif" font-size="18" font-weight="600" fill="#333333">Salon Brommer</text>
-                
-                <!-- Scissors icon -->
-                <g transform="translate(175, 25) rotate(45) scale(0.5)">
-                    <!-- Handles -->
-                    <rect x="-5" y="15" width="10" height="25" rx="5" fill="#94748c" />
-                    <rect x="-5" y="-40" width="10" height="25" rx="5" fill="#94748c" />
+    <header id="siteHeader">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" style="height: 38px; width: auto;">
+                    <!-- Logo Background -->
+                    <rect x="0" y="5" width="40" height="40" rx="20" fill="#94748c"/>
                     
-                    <!-- Blades -->
-                    <path d="M0 15 L-15 0 L0 -15 Z" fill="#94748c" />
-                    <path d="M0 -15 L15 0 L0 15 Z" fill="#94748c" />
+                    <!-- Stylized 'B' -->
+                    <path d="M10 15 Q10 12, 13 12 L22 12 Q27 12, 27 17 Q27 21, 23 22 Q28 23, 28 28 Q28 33, 23 33 L13 33 Q10 33, 10 30 Z" 
+                          fill="white" stroke="none" />
+                    <path d="M15 16 L20 16 Q23 16, 23 19 Q23 22, 20 22 L15 22 Z" fill="#94748c" />
+                    <path d="M15 25 L21 25 Q24 25, 24 28 Q24 31, 21 31 L15 31 Z" fill="#94748c" />
                     
-                    <!-- Connection -->
-                    <circle cx="0" cy="0" r="4" fill="#d8624c" />
-                </g>
-            </svg>
-        </a>
-        <nav>
-            <button class="mobile-toggle" id="menuToggle">☰</button>
-            <ul id="mainMenu">
-                <li><a href="#services">Leistungen</a></li>
-                <li><a href="#about">Über uns</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#testimonials">Bewertungen</a></li>
-                <li><a href="#gallery">Galerie</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-                <li><a href="#booking" class="button">Termin buchen</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+                    <!-- Salon Text -->
+                    <text x="45" y="26" font-family="'Segoe UI', sans-serif" font-size="18" font-weight="600" fill="#333333">Salon Brommer</text>
+                    
+                    <!-- Scissors icon -->
+                    <g transform="translate(175, 25) rotate(45) scale(0.5)">
+                        <!-- Handles -->
+                        <rect x="-5" y="15" width="10" height="25" rx="5" fill="#94748c" />
+                        <rect x="-5" y="-40" width="10" height="25" rx="5" fill="#94748c" />
+                        
+                        <!-- Blades -->
+                        <path d="M0 15 L-15 0 L0 -15 Z" fill="#94748c" />
+                        <path d="M0 -15 L15 0 L0 15 Z" fill="#94748c" />
+                        
+                        <!-- Connection -->
+                        <circle cx="0" cy="0" r="4" fill="#d8624c" />
+                    </g>
+                </svg>
+            </a>
+            <nav>
+                <button class="mobile-toggle" id="menuToggle">☰</button>
+                <ul id="mainMenu">
+                    <li><a href="#services">Leistungen</a></li>
+                    <li><a href="#about">Über uns</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#testimonials">Bewertungen</a></li>
+                    <li><a href="#gallery">Galerie</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                    <li><a href="#booking" class="button">Termin buchen</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -91,12 +94,15 @@
     <!-- Services Section -->
     <section id="services">
         <div class="container">
-            <h2 class="fade-in">Unsere Leistungen</h2>
-            <p class="fade-in" style="transition-delay: 0.1s;">Entdecken Sie unser umfangreiches Angebot an professionellen Haardienstleistungen, die speziell auf Ihre Bedürfnisse zugeschnitten sind.</p>
+            <h2 class="section-title fade-in">Unsere Leistungen</h2>
+            <p class="section-subtitle fade-in" style="transition-delay: 0.1s;">Entdecken Sie unser umfangreiches Angebot an professionellen Haardienstleistungen, die speziell auf Ihre Bedürfnisse zugeschnitten sind.</p>
             
             <div class="services-grid">
                 <div class="service-card stagger-item">
-                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=2969&auto=format&fit=crop" alt="Damen-Haarschnitt">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                         data-src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=2969&auto=format&fit=crop" 
+                         alt="Damen-Haarschnitt" 
+                         class="lazy-image">
                     <div class="service-content">
                         <h3>Damen-Haarschnitt</h3>
                         <p>Von klassisch bis modern – wir kreieren den perfekten Look, der zu Ihrem Typ passt.</p>
@@ -104,275 +110,32 @@
                     </div>
                 </div>
                 
-                <div class="service-card stagger-item" style="transition-delay: 0.2s;">
-                    <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=2070&auto=format&fit=crop" alt="Herren-Haarschnitt">
-                    <div class="service-content">
-                        <h3>Herren-Haarschnitt</h3>
-                        <p>Präzise Schnitte und moderne Styles für den selbstbewussten Mann.</p>
-                        <p><strong>Ab 25 €</strong></p>
+                <!-- Platinblond Transformation -->
+                <div class="gallery-item" data-category="color">
+                    <div class="before-after-container">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                             data-src="images/Platinblond.png" 
+                             alt="Vorher und Nachher - Platinblond Transformation" 
+                             class="full-image lazy-image">
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Platinblond Transformation</h3>
+                        <p>Professionelle Aufhellung mit Farbkorrektur</p>
                     </div>
                 </div>
-                
-                <div class="service-card stagger-item" style="transition-delay: 0.4s;">
-                    <img src="https://plus.unsplash.com/premium_photo-1664050114816-27654e87f725?q=80&w=2940&auto=format&fit=crop" alt="Farbe & Strähnen">
-                    <div class="service-content">
-                        <h3>Farbe & Strähnen</h3>
-                        <p>Ausdrucksstarke Farben und natürlich wirkende Highlights für jeden Haartyp.</p>
-                        <p><strong>Ab 65 €</strong></p>
-                    </div>
-                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="#" class="button load-more-button fade-in" style="transition-delay: 0.5s;">Mehr Bilder laden</a>
             </div>
         </div>
     </section>
     
-    <!-- About Section - Neu gestaltet -->
-    <section id="about">
-        <div class="container">
-            <h2 class="text-center fade-in">Über Salon Brommer</h2>
-            
-            <div class="about-intro text-center">
-                <p class="fade-in" style="transition-delay: 0.1s;">Seit über 20 Jahren ist der Salon Brommer eine Institution in Stuttgart-Vaihingen. Wir verbinden traditionelle Handwerkskunst mit modernsten Techniken und Trends.</p>
-            </div>
-            
-            <div class="about-grid">
-                <div class="about-image fade-in" style="transition-delay: 0.2s;">
-                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2074&auto=format&fit=crop" alt="Salon Brommer - Unser Team bei der Arbeit">
-                </div>
-                
-                <div class="about-content fade-in" style="transition-delay: 0.3s;">
-                    <h3>Unsere Philosophie</h3>
-                    <p>Unser Ziel ist es, nicht nur Ihre Haare zu verschönern, sondern Ihnen ein rundum entspannendes Erlebnis zu bieten. In unserem Salon können Sie dem Alltag entfliehen und sich verwöhnen lassen.</p>
-                    <p>Wir verstehen uns als Ihr Partner für Schönheit und Wohlbefinden und nehmen uns Zeit, Ihre individuellen Wünsche und Bedürfnisse zu verstehen.</p>
-                </div>
-            </div>
-            
-            <div class="about-grid reverse">
-                <div class="about-content fade-in" style="transition-delay: 0.4s;">
-                    <h3>Unsere Qualität</h3>
-                    <p>Wir verwenden ausschließlich hochwertige, umweltfreundliche Produkte und legen großen Wert auf kontinuierliche Weiterbildung, um Ihnen stets die besten und aktuellsten Haartrends anbieten zu können.</p>
-                    <p>Unser Team besucht regelmäßig Schulungen und Messen, um auf dem neuesten Stand der Frisurenmode zu bleiben und Ihnen den bestmöglichen Service zu bieten.</p>
-                </div>
-                
-                <div class="about-image fade-in" style="transition-delay: 0.5s;">
-                    <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=2071&auto=format&fit=crop" alt="Qualitätsprodukte im Salon Brommer">
-                </div>
-            </div>
-            
-            <div class="about-gallery">
-                <h3 class="text-center fade-in" style="transition-delay: 0.6s;">Einblicke in unseren Salon</h3>
-                <div class="gallery-grid">
-                    <div class="gallery-item fade-in" style="transition-delay: 0.7s;">
-                        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070&auto=format&fit=crop" alt="Salon Brommer - Einrichtung">
-                    </div>
-                    <div class="gallery-item fade-in" style="transition-delay: 0.8s;">
-                        <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?q=80&w=2036&auto=format&fit=crop" alt="Salon Brommer - Kundenberatung">
-                    </div>
-                    <div class="gallery-item fade-in" style="transition-delay: 0.9s;">
-                        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=2069&auto=format&fit=crop" alt="Salon Brommer - Styling">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-<!-- Verbesserte Team Section -->
-<section id="team">
-    <div class="container">
-        <h2 class="fade-in">Unser Team</h2>
-        <p class="fade-in" style="transition-delay: 0.1s;">Lernen Sie unsere talentierten und erfahrenen Stylisten kennen, die Ihnen mit Leidenschaft und Expertise zur Seite stehen.</p>
-        
-        <div class="team-grid">
-            <div class="team-member scale-in">
-                <div class="team-member-image">
-                    <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?q=80&w=1974&auto=format&fit=crop" alt="Marie Brommer">
-                </div>
-                <div class="team-content">
-                    <h3>Marie Brommer</h3>
-                    <span class="position">Inhaberin & Meisterin</span>
-                    <p>Mit über 25 Jahren Erfahrung und einem Auge für zeitlose Eleganz sorgt Marie für die perfekte Balance zwischen Tradition und Trend.</p>
-                </div>
-            </div>
-            
-            <div class="team-member scale-in" style="transition-delay: 0.2s;">
-                <div class="team-member-image">
-                    <img src="https://images.unsplash.com/photo-1567324216289-97cc4134f626?q=80&w=3164&auto=format&fit=crop" alt="Thomas Weber">
-                </div>
-                <div class="team-content">
-                    <h3>Thomas Weber</h3>
-                    <span class="position">Senior Stylist</span>
-                    <p>Thomas ist unser Experte für moderne Herrenschnitte und kreative Farbgestaltungen mit besonderem Gespür für Ihren individuellen Stil.</p>
-                </div>
-            </div>
-            
-            <div class="team-member scale-in" style="transition-delay: 0.4s;">
-                <div class="team-member-image">
-                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop" alt="Sophia Müller">
-                </div>
-                <div class="team-content">
-                    <h3>Sophia Müller</h3>
-                    <span class="position">Coloristin</span>
-                    <p>Sophias Spezialität sind atemberaubende Farbkreationen und Balayage-Techniken, die Ihr Haar zum Strahlen bringen.</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="team-cta fade-in" style="transition-delay: 0.6s;">
-            <p>Interessiert an einer Karriere bei uns? Wir suchen regelmäßig nach talentierten Stylisten für unser Team.</p>
-            <a href="#contact" class="button">Kontaktieren Sie uns</a>
-        </div>
-    </div>
-</section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-        <div class="container">
-            <h2 class="text-center fade-in">Das sagen unsere Kunden</h2>
-            <p class="text-center fade-in" style="transition-delay: 0.1s; max-width: 800px; margin: 0 auto 40px;">Wir freuen uns über die vielen positiven Rückmeldungen unserer zufriedenen Kunden. Hier finden Sie einige Stimmen aus unserer Community.</p>
-            
-            <div class="testimonials-container">
-                <div class="testimonial-card fade-in" style="transition-delay: 0.2s;">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"Seit über 5 Jahren komme ich regelmäßig zum Salon Brommer. Marie versteht genau, was ich möchte, und berät mich auch zu neuen Trends. Die Atmosphäre ist entspannt und professionell zugleich."</p>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop" alt="Kundenfoto" class="testimonial-avatar">
-                        <div class="testimonial-info">
-                            <p class="testimonial-name">Sabine K.</p>
-                            <p class="testimonial-date">Stammkundin seit 2020</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card fade-in" style="transition-delay: 0.3s;">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"Thomas hat aus meinen langweiligen Haaren einen echten Hingucker gemacht! Die Strähnen sind perfekt platziert und die Farbe hält deutlich länger als bei meinem vorherigen Friseur. Bestes Preis-Leistungs-Verhältnis."</p>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop" alt="Kundenfoto" class="testimonial-avatar">
-                        <div class="testimonial-info">
-                            <p class="testimonial-name">Michael W.</p>
-                            <p class="testimonial-date">April 2025</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card fade-in" style="transition-delay: 0.4s;">
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">"Als ich für meine Hochzeit einen besonderen Look wollte, hat Sophia mich perfekt beraten. Die Probestylings waren sehr hilfreich und am großen Tag saß jede Strähne. Der komplette Service war einfach wunderbar!"</p>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1976&auto=format&fit=crop" alt="Kundenfoto" class="testimonial-avatar">
-                        <div class="testimonial-info">
-                            <p class="testimonial-name">Laura M.</p>
-                            <p class="testimonial-date">März 2025</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-cta text-center fade-in" style="transition-delay: 0.5s;">
-                <p>Sind Sie auch begeistert von unserem Service? Hinterlassen Sie eine Bewertung auf Google oder Facebook!</p>
-                <div class="first-time-offer">
-                    <div class="offer-badge">10% Rabatt</div>
-                    <h3>Neukunden-Angebot</h3>
-                    <p>Bei Ihrem ersten Besuch erhalten Sie 10% Rabatt auf alle Leistungen. Einfach bei der Buchung "Neukunde" angeben.</p>
-                    <a href="#booking" class="button">Jetzt Termin vereinbaren</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
- <!-- Aktualisierte Gallery Section mit lokalen Bildern -->
-<section id="gallery">
-    <div class="container">
-        <h2 class="text-center fade-in">Unsere Arbeiten</h2>
-        <p class="text-center fade-in" style="transition-delay: 0.1s; max-width: 800px; margin: 0 auto 40px;">Entdecken Sie eine Auswahl unserer Frisuren und Styling-Ergebnisse. Lassen Sie sich inspirieren!</p>
-        
-        <div class="gallery-tabs">
-            <button class="gallery-tab active" data-category="all">Alle</button>
-            <button class="gallery-tab" data-category="women">Damen</button>
-            <button class="gallery-tab" data-category="men">Herren</button>
-            <button class="gallery-tab" data-category="color">Farbe</button>
-            <button class="gallery-tab" data-category="special">Besondere Anlässe</button>
-        </div>
-        
-        <div class="gallery-container">
-            <!-- Damen (Bob Frisur) -->
-            <div class="gallery-item" data-category="women">
-                <div class="before-after-container">
-                    <img src="images/Bob.png" alt="Vorher und Nachher - Moderner Bob mit Stufen" class="full-image">
-                </div>
-                <div class="gallery-caption">
-                    <h3>Moderner Bob mit Stufen</h3>
-                    <p>Frischer Look mit mehr Volumen und Bewegung</p>
-                </div>
-            </div>
-            
-            <!-- Herren (Fade Cut) -->
-            <div class="gallery-item" data-category="men">
-                <div class="before-after-container">
-                    <img src="images/Fade.png" alt="Vorher und Nachher - Klassischer Fade Cut" class="full-image">
-                </div>
-                <div class="gallery-caption">
-                    <h3>Klassischer Fade Cut</h3>
-                    <p>Präziser Übergang mit texturierter Oberseite</p>
-                </div>
-            </div>
-            
-            <!-- Farbe (Balayage) -->
-            <div class="gallery-item" data-category="color">
-                <div class="before-after-container">
-                    <img src="images/Balayage.png" alt="Vorher und Nachher - Balayage in warmen Karamell-Tönen" class="full-image">
-                </div>
-                <div class="gallery-caption">
-                    <h3>Balayage in Karamell-Tönen</h3>
-                    <p>Natürlicher Farbverlauf für mehr Dimension</p>
-                </div>
-            </div>
-            
-            <!-- Besondere Anlässe (Hochsteckfrisur) -->
-            <div class="gallery-item" data-category="special">
-                <div class="before-after-container">
-                    <img src="images/Hochsteckfrisur.png" alt="Vorher und Nachher - Elegante Hochsteckfrisur" class="full-image">
-                </div>
-                <div class="gallery-caption">
-                    <h3>Elegante Hochsteckfrisur</h3>
-                    <p>Perfekt für Hochzeiten und besondere Anlässe</p>
-                </div>
-            </div>
-            
-            <!-- Lang auf kurz Transformation -->
-            <div class="gallery-item" data-category="men">
-                <div class="before-after-container">
-                    <img src="images/Transformation.png" alt="Vorher und Nachher - Lang auf kurz Transformation" class="full-image">
-                </div>
-                <div class="gallery-caption">
-                    <h3>Lang auf kurz Transformation</h3>
-                    <p>Mutiger Schnitt für einen frischen Start</p>
-                </div>
-            </div>
-            
-            <!-- Platinblond Transformation -->
-            <div class="gallery-item" data-category="color">
-                <div class="before-after-container">
-                    <img src="images/Platinblond.png" alt="Vorher und Nachher - Platinblond Transformation" class="full-image">
-                </div>
-                <div class="gallery-caption">
-                    <h3>Platinblond Transformation</h3>
-                    <p>Professionelle Aufhellung mit Farbkorrektur</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="text-center">
-            <a href="#" class="button load-more-button fade-in" style="transition-delay: 0.5s;">Mehr Bilder laden</a>
-        </div>
-    </div>
-</section>
     <!-- FAQ Section -->
     <section id="faq">
         <div class="container">
-            <h2 class="text-center fade-in">Häufig gestellte Fragen</h2>
-            <p class="text-center fade-in" style="transition-delay: 0.1s; max-width: 800px; margin: 0 auto 40px;">Hier finden Sie Antworten auf die häufigsten Fragen rund um unseren Salon und unsere Dienstleistungen.</p>
+            <h2 class="section-title text-center fade-in">Häufig gestellte Fragen</h2>
+            <p class="section-subtitle text-center fade-in" style="transition-delay: 0.1s; max-width: 800px; margin: 0 auto 40px;">Hier finden Sie Antworten auf die häufigsten Fragen rund um unseren Salon und unsere Dienstleistungen.</p>
             
             <div class="faq-item fade-in" style="transition-delay: 0.2s;">
                 <div class="faq-question">
@@ -384,54 +147,53 @@
                 </div>
             </div>
                 
-                <div class="faq-item fade-in" style="transition-delay: 0.3s;">
-                    <div class="faq-question">
-                        <h3>Wie viel Zeit sollte ich für meinen Besuch einplanen?</h3>
-                        <div class="faq-toggle">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Die Dauer hängt von der gewünschten Dienstleistung ab: Ein Haarschnitt dauert in der Regel 30-60 Minuten, während Colorierungen oder Balayage-Techniken zwischen 2-3 Stunden in Anspruch nehmen können. Bei der Terminbuchung wird Ihnen die ungefähre Dauer angezeigt. Für Beratungsgespräche vor aufwendigeren Behandlungen planen wir zusätzliche Zeit ein.</p>
-                    </div>
+            <div class="faq-item fade-in" style="transition-delay: 0.3s;">
+                <div class="faq-question">
+                    <h3>Wie viel Zeit sollte ich für meinen Besuch einplanen?</h3>
+                    <div class="faq-toggle">+</div>
                 </div>
-                
-                <div class="faq-item fade-in" style="transition-delay: 0.4s;">
-                    <div class="faq-question">
-                        <h3>Welche Zahlungsmöglichkeiten bieten Sie an?</h3>
-                        <div class="faq-toggle">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Wir akzeptieren Barzahlung, EC-Karte und alle gängigen Kreditkarten. Leider ist eine Zahlung auf Rechnung nicht möglich.</p>
-                    </div>
+                <div class="faq-answer">
+                    <p>Die Dauer hängt von der gewünschten Dienstleistung ab: Ein Haarschnitt dauert in der Regel 30-60 Minuten, während Colorierungen oder Balayage-Techniken zwischen 2-3 Stunden in Anspruch nehmen können. Bei der Terminbuchung wird Ihnen die ungefähre Dauer angezeigt. Für Beratungsgespräche vor aufwendigeren Behandlungen planen wir zusätzliche Zeit ein.</p>
                 </div>
+            </div>
                 
-                <div class="faq-item fade-in" style="transition-delay: 0.5s;">
-                    <div class="faq-question">
-                        <h3>Was passiert, wenn ich meinen Termin kurzfristig absagen muss?</h3>
-                        <div class="faq-toggle">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Wir bitten um eine Absage mindestens 24 Stunden vor dem vereinbarten Termin. Bei kurzfristigeren Absagen oder Nichterscheinen behalten wir uns vor, eine Ausfallgebühr in Höhe von 50% des geplanten Services zu berechnen. Bei Krankheit mit ärztlichem Attest entfällt diese Gebühr selbstverständlich.</p>
-                    </div>
+            <div class="faq-item fade-in" style="transition-delay: 0.4s;">
+                <div class="faq-question">
+                    <h3>Welche Zahlungsmöglichkeiten bieten Sie an?</h3>
+                    <div class="faq-toggle">+</div>
                 </div>
-                
-                <div class="faq-item fade-in" style="transition-delay: 0.6s;">
-                    <div class="faq-question">
-                        <h3>Welche Haarprodukte verwenden Sie in Ihrem Salon?</h3>
-                        <div class="faq-toggle">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Wir arbeiten ausschließlich mit hochwertigen, professionellen Produkten renommierter Marken. Alle unsere Pflegeprodukte und Colorationen sind dermatologisch getestet und möglichst umweltfreundlich. Die von uns verwendeten Produkte können Sie auch bei uns im Salon erwerben – unsere Stylisten beraten Sie gerne zu den passenden Produkten für Ihren Haartyp.</p>
-                    </div>
+                <div class="faq-answer">
+                    <p>Wir akzeptieren Barzahlung, EC-Karte und alle gängigen Kreditkarten. Leider ist eine Zahlung auf Rechnung nicht möglich.</p>
                 </div>
+            </div>
                 
-                <div class="faq-item fade-in" style="transition-delay: 0.7s;">
-                    <div class="faq-question">
-                        <h3>Muss ich meine Haare vor dem Termin waschen?</h3>
-                        <div class="faq-toggle">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Nein, es ist nicht notwendig, Ihre Haare vor dem Besuch zu waschen. Bei den meisten Behandlungen waschen wir Ihre Haare ohnehin im Salon. Bei Colorationen ist es sogar besser, wenn die Haare nicht frisch gewaschen sind, da die natürliche Sebumschicht die Kopfhaut während der Behandlung schützen kann.</p>
-                    </div>
+            <div class="faq-item fade-in" style="transition-delay: 0.5s;">
+                <div class="faq-question">
+                    <h3>Was passiert, wenn ich meinen Termin kurzfristig absagen muss?</h3>
+                    <div class="faq-toggle">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Wir bitten um eine Absage mindestens 24 Stunden vor dem vereinbarten Termin. Bei kurzfristigeren Absagen oder Nichterscheinen behalten wir uns vor, eine Ausfallgebühr in Höhe von 50% des geplanten Services zu berechnen. Bei Krankheit mit ärztlichem Attest entfällt diese Gebühr selbstverständlich.</p>
+                </div>
+            </div>
+                
+            <div class="faq-item fade-in" style="transition-delay: 0.6s;">
+                <div class="faq-question">
+                    <h3>Welche Haarprodukte verwenden Sie in Ihrem Salon?</h3>
+                    <div class="faq-toggle">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Wir arbeiten ausschließlich mit hochwertigen, professionellen Produkten renommierter Marken. Alle unsere Pflegeprodukte und Colorationen sind dermatologisch getestet und möglichst umweltfreundlich. Die von uns verwendeten Produkte können Sie auch bei uns im Salon erwerben – unsere Stylisten beraten Sie gerne zu den passenden Produkten für Ihren Haartyp.</p>
+                </div>
+            </div>
+                
+            <div class="faq-item fade-in" style="transition-delay: 0.7s;">
+                <div class="faq-question">
+                    <h3>Muss ich meine Haare vor dem Termin waschen?</h3>
+                    <div class="faq-toggle">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Nein, es ist nicht notwendig, Ihre Haare vor dem Besuch zu waschen. Bei den meisten Behandlungen waschen wir Ihre Haare ohnehin im Salon. Bei Colorationen ist es sogar besser, wenn die Haare nicht frisch gewaschen sind, da die natürliche Sebumschicht die Kopfhaut während der Behandlung schützen kann.</p>
                 </div>
             </div>
             
@@ -442,14 +204,14 @@
     <!-- Booking Section - Mit Kalender-Buchungssystem -->
     <section id="booking">
         <div class="container">
-            <h2 class="text-center fade-in">Termin vereinbaren</h2>
-            <p class="text-center fade-in" style="transition-delay: 0.1s; max-width: 800px; margin: 0 auto 40px;">Buchen Sie ganz einfach Ihren Wunschtermin online. Wählen Sie zunächst einen Service, dann einen Tag und anschließend eine verfügbare Uhrzeit.</p>
+            <h2 class="section-title text-center fade-in">Termin vereinbaren</h2>
+            <p class="section-subtitle text-center fade-in" style="transition-delay: 0.1s; max-width: 800px; margin: 0 auto 40px;">Buchen Sie ganz einfach Ihren Wunschtermin online. Wählen Sie zunächst einen Service, dann einen Tag und anschließend eine verfügbare Uhrzeit.</p>
             
             <div class="booking-container">
                 <!-- Step 1: Service Selection -->
                 <div class="booking-step" id="step-1">
                     <h3>1. Service auswählen</h3>
-                    <div class="services-selection">
+                    <div class="services-selection mobile-grid">
                         <div class="service-option" data-service="damen" data-duration="60">
                             <div class="service-icon">✂️</div>
                             <div class="service-details">
@@ -537,7 +299,7 @@
                         <p>Gewähltes Datum: <span id="selected-date-display">-</span></p>
                     </div>
                     
-                    <div class="time-slots" id="time-slots">
+                    <div class="time-slots mobile-grid" id="time-slots">
                         <!-- Time slots will be dynamically populated with JavaScript -->
                     </div>
                     
@@ -617,8 +379,8 @@
     <!-- Kontakt Section -->
     <section id="contact">
         <div class="container">
-            <h2 class="text-center fade-in">Kontakt & Anfahrt</h2>
-            <p class="text-center fade-in" style="transition-delay: 0.1s; max-width: 800px; margin: 0 auto 40px;">Wir freuen uns auf Ihren Besuch. Hier finden Sie alle Informationen, wie Sie uns erreichen können.</p>
+            <h2 class="section-title text-center fade-in">Kontakt & Anfahrt</h2>
+            <p class="section-subtitle text-center fade-in" style="transition-delay: 0.1s; max-width: 800px; margin: 0 auto 40px;">Wir freuen uns auf Ihren Besuch. Hier finden Sie alle Informationen, wie Sie uns erreichen können.</p>
             
             <div class="contact-grid">
                 <div class="contact-info">
@@ -728,8 +490,10 @@
 
     <!-- Cookie-Banner -->
     <div id="cookie-banner">
-        <p>Diese Website verwendet Cookies, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten. <a href="#" id="privacy-link-cookie">Datenschutzerklärung</a></p>
-        <button id="accept-cookies" class="button">Akzeptieren</button>
+        <div class="cookie-content">
+            <p>Diese Website verwendet Cookies, um Ihnen die bestmögliche Erfahrung zu bieten. <a href="#" id="privacy-link-cookie">Datenschutzerklärung</a></p>
+            <button id="accept-cookies" class="button">Akzeptieren</button>
+        </div>
     </div>
 
     <!-- Zusätzliche Sektionen für Footer-Links -->
@@ -831,14 +595,301 @@
                 <p>Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht auf Berichtigung oder Löschung dieser Daten. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese jederzeit widerrufen.</p>
                 
                 <h3>4. Cookies</h3>
-                <p>Unsere Website verwendet Cookies, um Ihnen ein optimales Nutzererlebnis zu bieten. Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und die Ihr Browser speichert. Die meisten der von uns verwendeten Cookies sind so genannte "Session-Cookies". Sie werden nach Ende Ihres Besuchs automatisch gelöscht.</p>
+                <p>Unsere Website verwendet Cookies, um Ihnen ein optimales Nutzererlebnis zu bieten. Cookies sind kleine Textdate<div class="service-card stagger-item" style="transition-delay: 0.2s;">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                         data-src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=2070&auto=format&fit=crop" 
+                         alt="Herren-Haarschnitt" 
+                         class="lazy-image">
+                    <div class="service-content">
+                        <h3>Herren-Haarschnitt</h3>
+                        <p>Präzise Schnitte und moderne Styles für den selbstbewussten Mann.</p>
+                        <p><strong>Ab 25 €</strong></p>
+                    </div>
+                </div>
+                
+                <div class="service-card stagger-item" style="transition-delay: 0.4s;">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                         data-src="https://plus.unsplash.com/premium_photo-1664050114816-27654e87f725?q=80&w=2940&auto=format&fit=crop" 
+                         alt="Farbe & Strähnen" 
+                         class="lazy-image">
+                    <div class="service-content">
+                        <h3>Farbe & Strähnen</h3>
+                        <p>Ausdrucksstarke Farben und natürlich wirkende Highlights für jeden Haartyp.</p>
+                        <p><strong>Ab 65 €</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section - Neu gestaltet -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title text-center fade-in">Über Salon Brommer</h2>
+            
+            <div class="about-intro text-center">
+                <p class="section-subtitle fade-in" style="transition-delay: 0.1s;">Seit über 20 Jahren ist der Salon Brommer eine Institution in Stuttgart-Vaihingen. Wir verbinden traditionelle Handwerkskunst mit modernsten Techniken und Trends.</p>
             </div>
             
-            <button class="button modal-close-button">Schließen</button>
+            <div class="about-grid">
+                <div class="about-image fade-in" style="transition-delay: 0.2s;">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                         data-src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2074&auto=format&fit=crop" 
+                         alt="Salon Brommer - Unser Team bei der Arbeit" 
+                         class="lazy-image">
+                </div>
+                
+                <div class="about-content fade-in" style="transition-delay: 0.3s;">
+                    <h3>Unsere Philosophie</h3>
+                    <p>Unser Ziel ist es, nicht nur Ihre Haare zu verschönern, sondern Ihnen ein rundum entspannendes Erlebnis zu bieten. In unserem Salon können Sie dem Alltag entfliehen und sich verwöhnen lassen.</p>
+                    <p>Wir verstehen uns als Ihr Partner für Schönheit und Wohlbefinden und nehmen uns Zeit, Ihre individuellen Wünsche und Bedürfnisse zu verstehen.</p>
+                </div>
+            </div>
+            
+            <div class="about-grid reverse">
+                <div class="about-content fade-in" style="transition-delay: 0.4s;">
+                    <h3>Unsere Qualität</h3>
+                    <p>Wir verwenden ausschließlich hochwertige, umweltfreundliche Produkte und legen großen Wert auf kontinuierliche Weiterbildung, um Ihnen stets die besten und aktuellsten Haartrends anbieten zu können.</p>
+                    <p>Unser Team besucht regelmäßig Schulungen und Messen, um auf dem neuesten Stand der Frisurenmode zu bleiben und Ihnen den bestmöglichen Service zu bieten.</p>
+                </div>
+                
+                <div class="about-image fade-in" style="transition-delay: 0.5s;">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                         data-src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=2071&auto=format&fit=crop" 
+                         alt="Qualitätsprodukte im Salon Brommer" 
+                         class="lazy-image">
+                </div>
+            </div>
+            
+            <div class="about-gallery">
+                <h3 class="text-center fade-in" style="transition-delay: 0.6s;">Einblicke in unseren Salon</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item fade-in" style="transition-delay: 0.7s;">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                             data-src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070&auto=format&fit=crop" 
+                             alt="Salon Brommer - Einrichtung" 
+                             class="lazy-image">
+                    </div>
+                    <div class="gallery-item fade-in" style="transition-delay: 0.8s;">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                             data-src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?q=80&w=2036&auto=format&fit=crop" 
+                             alt="Salon Brommer - Kundenberatung" 
+                             class="lazy-image">
+                    </div>
+                    <div class="gallery-item fade-in" style="transition-delay: 0.9s;">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                             data-src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=2069&auto=format&fit=crop" 
+                             alt="Salon Brommer - Styling" 
+                             class="lazy-image">
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <script src="script.js"></script>
-    <script src="mobile-optimizations.js"></script>
-</body>
-</html>
+    <!-- Team Section -->
+    <section id="team">
+        <div class="container">
+            <h2 class="section-title fade-in">Unser Team</h2>
+            <p class="section-subtitle fade-in" style="transition-delay: 0.1s;">Lernen Sie unsere talentierten und erfahrenen Stylisten kennen, die Ihnen mit Leidenschaft und Expertise zur Seite stehen.</p>
+            
+            <div class="team-grid">
+                <div class="team-member scale-in">
+                    <div class="team-member-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                             data-src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?q=80&w=1974&auto=format&fit=crop" 
+                             alt="Marie Brommer" 
+                             class="lazy-image">
+                    </div>
+                    <div class="team-content">
+                        <h3>Marie Brommer</h3>
+                        <span class="position">Inhaberin & Meisterin</span>
+                        <p>Mit über 25 Jahren Erfahrung und einem Auge für zeitlose Eleganz sorgt Marie für die perfekte Balance zwischen Tradition und Trend.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member scale-in" style="transition-delay: 0.2s;">
+                    <div class="team-member-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                             data-src="https://images.unsplash.com/photo-1567324216289-97cc4134f626?q=80&w=3164&auto=format&fit=crop" 
+                             alt="Thomas Weber" 
+                             class="lazy-image">
+                    </div>
+                    <div class="team-content">
+                        <h3>Thomas Weber</h3>
+                        <span class="position">Senior Stylist</span>
+                        <p>Thomas ist unser Experte für moderne Herrenschnitte und kreative Farbgestaltungen mit besonderem Gespür für Ihren individuellen Stil.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member scale-in" style="transition-delay: 0.4s;">
+                    <div class="team-member-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                             data-src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop" 
+                             alt="Sophia Müller" 
+                             class="lazy-image">
+                    </div>
+                    <div class="team-content">
+                        <h3>Sophia Müller</h3>
+                        <span class="position">Coloristin</span>
+                        <p>Sophias Spezialität sind atemberaubende Farbkreationen und Balayage-Techniken, die Ihr Haar zum Strahlen bringen.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="team-cta fade-in" style="transition-delay: 0.6s;">
+                <p>Interessiert an einer Karriere bei uns? Wir suchen regelmäßig nach talentierten Stylisten für unser Team.</p>
+                <a href="#contact" class="button">Kontaktieren Sie uns</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="section-title text-center fade-in">Das sagen unsere Kunden</h2>
+            <p class="section-subtitle text-center fade-in" style="transition-delay: 0.1s; max-width: 800px; margin: 0 auto 40px;">Wir freuen uns über die vielen positiven Rückmeldungen unserer zufriedenen Kunden. Hier finden Sie einige Stimmen aus unserer Community.</p>
+            
+            <div class="testimonials-container">
+                <div class="testimonial-card fade-in" style="transition-delay: 0.2s;">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Seit über 5 Jahren komme ich regelmäßig zum Salon Brommer. Marie versteht genau, was ich möchte, und berät mich auch zu neuen Trends. Die Atmosphäre ist entspannt und professionell zugleich."</p>
+                    <div class="testimonial-author">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                             data-src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop" 
+                             alt="Kundenfoto" 
+                             class="testimonial-avatar lazy-image">
+                        <div class="testimonial-info">
+                            <p class="testimonial-name">Sabine K.</p>
+                            <p class="testimonial-date">Stammkundin seit 2020</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in" style="transition-delay: 0.3s;">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Thomas hat aus meinen langweiligen Haaren einen echten Hingucker gemacht! Die Strähnen sind perfekt platziert und die Farbe hält deutlich länger als bei meinem vorherigen Friseur. Bestes Preis-Leistungs-Verhältnis."</p>
+                    <div class="testimonial-author">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                             data-src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop" 
+                             alt="Kundenfoto" 
+                             class="testimonial-avatar lazy-image">
+                        <div class="testimonial-info">
+                            <p class="testimonial-name">Michael W.</p>
+                            <p class="testimonial-date">April 2025</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in" style="transition-delay: 0.4s;">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Als ich für meine Hochzeit einen besonderen Look wollte, hat Sophia mich perfekt beraten. Die Probestylings waren sehr hilfreich und am großen Tag saß jede Strähne. Der komplette Service war einfach wunderbar!"</p>
+                    <div class="testimonial-author">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                             data-src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1976&auto=format&fit=crop" 
+                             alt="Kundenfoto" 
+                             class="testimonial-avatar lazy-image">
+                        <div class="testimonial-info">
+                            <p class="testimonial-name">Laura M.</p>
+                            <p class="testimonial-date">März 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-cta text-center fade-in" style="transition-delay: 0.5s;">
+                <p>Sind Sie auch begeistert von unserem Service? Hinterlassen Sie eine Bewertung auf Google oder Facebook!</p>
+                <div class="first-time-offer">
+                    <div class="offer-badge">10% Rabatt</div>
+                    <h3>Neukunden-Angebot</h3>
+                    <p>Bei Ihrem ersten Besuch erhalten Sie 10% Rabatt auf alle Leistungen. Einfach bei der Buchung "Neukunde" angeben.</p>
+                    <a href="#booking" class="button">Jetzt Termin vereinbaren</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title text-center fade-in">Unsere Arbeiten</h2>
+            <p class="section-subtitle text-center fade-in" style="transition-delay: 0.1s; max-width: 800px; margin: 0 auto 40px;">Entdecken Sie eine Auswahl unserer Frisuren und Styling-Ergebnisse. Lassen Sie sich inspirieren!</p>
+            
+            <div class="gallery-tabs touch-scroll">
+                <button class="gallery-tab active" data-category="all">Alle</button>
+                <button class="gallery-tab" data-category="women">Damen</button>
+                <button class="gallery-tab" data-category="men">Herren</button>
+                <button class="gallery-tab" data-category="color">Farbe</button>
+                <button class="gallery-tab" data-category="special">Besondere Anlässe</button>
+            </div>
+            
+            <div class="gallery-container">
+                <!-- Damen (Bob Frisur) -->
+                <div class="gallery-item" data-category="women">
+                    <div class="before-after-container">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                             data-src="images/Bob.png" 
+                             alt="Vorher und Nachher - Moderner Bob mit Stufen" 
+                             class="full-image lazy-image">
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Moderner Bob mit Stufen</h3>
+                        <p>Frischer Look mit mehr Volumen und Bewegung</p>
+                    </div>
+                </div>
+                
+                <!-- Herren (Fade Cut) -->
+                <div class="gallery-item" data-category="men">
+                    <div class="before-after-container">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                             data-src="images/Fade.png" 
+                             alt="Vorher und Nachher - Klassischer Fade Cut" 
+                             class="full-image lazy-image">
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Klassischer Fade Cut</h3>
+                        <p>Präziser Übergang mit texturierter Oberseite</p>
+                    </div>
+                </div>
+                
+                <!-- Farbe (Balayage) -->
+                <div class="gallery-item" data-category="color">
+                    <div class="before-after-container">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                             data-src="images/Balayage.png" 
+                             alt="Vorher und Nachher - Balayage in warmen Karamell-Tönen" 
+                             class="full-image lazy-image">
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Balayage in Karamell-Tönen</h3>
+                        <p>Natürlicher Farbverlauf für mehr Dimension</p>
+                    </div>
+                </div>
+                
+                <!-- Besondere Anlässe (Hochsteckfrisur) -->
+                <div class="gallery-item" data-category="special">
+                    <div class="before-after-container">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                             data-src="images/Hochsteckfrisur.png" 
+                             alt="Vorher und Nachher - Elegante Hochsteckfrisur" 
+                             class="full-image lazy-image">
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Elegante Hochsteckfrisur</h3>
+                        <p>Perfekt für Hochzeiten und besondere Anlässe</p>
+                    </div>
+                </div>
+                
+                <!-- Lang auf kurz Transformation -->
+                <div class="gallery-item" data-category="men">
+                    <div class="before-after-container">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" 
+                             data-src="images/Transformation.png" 
+                             alt="Vorher und Nachher - Lang auf kurz Transformation" 
+                             class="full-image lazy-image">
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Lang auf kurz Transformation</h3>
+                        <p>Mutiger Schnitt für einen frischen Start</p>
+                    </div>
+                </div>
