@@ -1,420 +1,78 @@
-/* Mobile-Optimierungen für Salon Brommer */
-
-/* Verbesserte Basiseinstellungen für mobile Geräte */
+/* Mobile-Grundeinstellungen */
 @media (max-width: 768px) {
-  html {
-    font-size: 15px; /* Leicht reduzierte Basisschriftgröße für mobile Geräte */
+  body {
+    padding-top: 70px;
+    font-size: 15px;
   }
   
-  body {
-    padding-top: 70px; /* Geringerer Abstand zum Header */
+  h1 {
+    font-size: 32px;
+  }
+  
+  h2 {
+    font-size: 28px;
+  }
+  
+  h3 {
+    font-size: 22px;
   }
   
   .container {
-    width: 95%; /* Mehr Platz am Rand nutzen */
-    padding: 0 10px; 
+    width: 95%;
   }
   
   section {
-    padding: 30px 0; /* Vertikaler Raum zwischen Sektionen verringert */
+    padding: 30px 0;
   }
-}
-
-/* Optimiertes Header/Navigation für mobile Geräte */
-@media (max-width: 768px) {
+  
+  /* Optimierte Navigation */
   header {
-    top: 0; /* Immer am Anfang der Seite fixiert */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
   }
   
   .header-container {
     padding: 10px 15px;
-    margin: 0 8px;
-    border-radius: 12px;
   }
   
-  .logo svg {
-    height: 32px; /* Logo etwas verkleinern */
+  /* Mobile-Menü Optimierungen */
+  #mainMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+  }
+  
+  #mainMenu.active {
+    display: flex;
+  }
+  
+  #mainMenu li {
+    margin: 5px 0;
+    width: 100%;
   }
   
   .mobile-toggle {
-    font-size: 26px;
-    padding: 5px;
-    margin-right: -5px;
+    display: block !important;
   }
   
-  /* Verbesserte mobile Navigation */
-  nav ul.active {
-    max-height: 85vh; /* Maximale Höhe begrenzen */
-    overflow-y: auto; /* Scrollbar bei Bedarf */
-    top: calc(100% + 5px);
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-  }
-  
-  nav li {
-    margin: 2px 0;
-  }
-  
-  nav a:not(.button) {
-    padding: 12px 10px;
-    font-size: 16px;
-  }
-  
-  nav .button {
-    margin: 8px 0 0;
-    width: 100%;
-    text-align: center;
+  /* Verbesserte Formular-Elemente */
+  input, textarea, select, button {
+    font-size: 16px; /* Verhindert Zoom auf iOS */
     padding: 12px;
   }
-}
-
-/* Optimierte Hero-Sektion */
-@media (max-width: 768px) {
-  .hero {
-    padding: 50px 0;
-    background-attachment: scroll; /* Verhindert Rendering-Probleme auf mobilen Geräten */
-  }
   
-  .hero h1 {
-    font-size: 32px;
-    line-height: 1.2;
-  }
-  
-  .hero p {
-    font-size: 16px;
-    margin-bottom: 25px;
-  }
-  
-  .hero .button {
-    width: 100%;
-    max-width: 280px;
-  }
-}
-
-/* Optimierte Service-Karten */
-@media (max-width: 768px) {
-  .services-grid {
-    gap: 20px;
-  }
-  
-  .service-card {
-    margin-bottom: 5px;
-  }
-  
-  .service-card img {
-    height: 200px; /* Bilderhöhe reduzieren */
-  }
-}
-
-/* Optimiertes Team-Layout */
-@media (max-width: 768px) {
-  .team-member-image {
-    height: 280px; /* Bilderhöhe reduzieren */
-  }
-  
-  .team-content {
-    padding: 20px 15px;
-  }
-  
-  .team-cta {
-    margin-top: 40px;
-  }
-}
-
-/* Optimierte Testimonials */
-@media (max-width: 768px) {
-  .testimonial-card {
-    padding: 20px;
-  }
-  
-  .first-time-offer {
-    padding: 20px;
-    margin-top: 30px;
-  }
-  
-  .offer-badge {
-    font-size: 14px;
-    padding: 6px 12px;
-  }
-}
-
-/* Optimierte Galerie */
-@media (max-width: 768px) {
-  .gallery-tabs {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding-bottom: 10px;
-    justify-content: flex-start;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  .gallery-tab {
-    flex: 0 0 auto;
-    white-space: nowrap;
-  }
-  
-  .before-after-container {
-    max-height: 250px;
-  }
-  
-  .full-image {
-    max-height: 250px;
-  }
-}
-
-/* Optimierte FAQ-Sektion */
-@media (max-width: 768px) {
-  .faq-question {
-    padding: 15px;
-  }
-  
-  .faq-question h3 {
-    font-size: 16px;
-    padding-right: 20px; /* Platz für Plus-Symbol */
-  }
-  
-  .faq-item.active .faq-answer {
-    padding: 0 15px 15px;
-  }
-}
-
-/* Optimiertes Buchungsformular */
-@media (max-width: 768px) {
-  .booking-step {
-    padding: 20px 15px;
-  }
-  
-  .services-selection {
-    gap: 15px;
-  }
-  
-  .service-option {
-    padding: 12px 10px;
-  }
-  
-  .service-icon {
-    font-size: 24px;
-    margin-right: 10px;
-  }
-  
-  .calendar-container {
-    max-width: 100%;
-  }
-  
-  .weekdays, .calendar-days {
-    font-size: 14px;
-  }
-  
-  .time-slots {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  
-  .time-slot {
-    padding: 8px 5px;
-    font-size: 14px;
-  }
-  
-  .booking-summary {
-    padding: 15px;
-  }
-  
-  .customer-form {
-    gap: 10px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .confirmation-icon {
-    font-size: 40px;
-  }
-}
-
-/* Optimierte Kontaktsektion */
-@media (max-width: 768px) {
-  .contact-grid {
-    gap: 30px;
-  }
-  
-  .contact-info {
-    gap: 15px;
-  }
-  
-  .contact-method {
-    align-items: center;
-  }
-  
-  .contact-icon {
-    width: 36px;
-    height: 36px;
-  }
-  
-  .map {
-    min-height: 250px;
-  }
-}
-
-/* Optimierter Footer */
-@media (max-width: 768px) {
-  footer {
-    padding: 40px 0 15px;
-  }
-  
-  .footer-grid {
-    gap: 25px;
-  }
-  
-  .footer-column h3 {
-    margin-bottom: 10px;
-  }
-  
-  .footer-links li {
-    margin-bottom: 8px;
-  }
-}
-
-/* Verbesserte Modals */
-@media (max-width: 768px) {
-  .modal-content {
-    margin: 5% auto;
-    padding: 20px 15px;
-    max-height: 90vh;
-    overflow-y: auto;
-  }
-  
-  .tips-container {
-    gap: 15px;
-  }
-  
-  .tip-item {
-    padding: 15px;
-  }
-}
-
-/* Verbesserte Back-to-Top Button Position */
-@media (max-width: 768px) {
-  .back-to-top {
-    bottom: 70px; /* Höher positionieren, um nicht mit dem Buchungsbutton zu kollidieren */
-    right: 15px;
-    width: 40px;
-    height: 40px;
-  }
-}
-
-/* Verbesserte Ladeanimation */
-@media (max-width: 768px) {
-  .loader-spinner {
-    width: 36px;
-    height: 36px;
-  }
-}
-
-/* Verbesserte Cookie-Banner */
-@media (max-width: 768px) {
-  #cookie-banner {
-    padding: 15px 12px;
-  }
-  
-  #cookie-banner p {
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-}
-
-/* Zusätzliche Touch-optimierte Einstellungen */
-@media (max-width: 768px) {
-  /* Größere Touch-Ziele */
-  .button, 
-  nav a, 
-  .service-option,
-  .calendar-day,
-  .time-slot,
-  .gallery-tab,
-  .faq-question {
-    touch-action: manipulation; /* Verbessert Touch-Verhalten */
-  }
-  
-  /* Verhindert Zoom bei Input-Fokus */
-  input, 
-  select, 
-  textarea {
-    font-size: 16px; /* Verhindert Auto-Zoom auf iOS */
-  }
-  
-  /* Angepasste Übergänge für bessere Leistung */
-  * {
-    -webkit-tap-highlight-color: transparent; /* Entfernt blaues Highlight bei Taps */
-  }
-  
-  .service-card, .team-member, .gallery-item, .testimonial-card {
-    transition-duration: 0.3s; /* Kürzere Animationen für bessere Performance */
-  }
-}
-
-/* Bessere Handhabung für sehr kleine Bildschirme */
-@media (max-width: 375px) {
-  html {
-    font-size: 14px;
-  }
-  
-  .header-container {
-    padding: 8px 12px;
-  }
-  
-  .hero h1 {
-    font-size: 28px;
-  }
-  
-  h2 {
-    font-size: 26px;
-  }
-  
-  h3 {
-    font-size: 20px;
-  }
-  
-  .service-card img {
-    height: 180px;
-  }
-  
-  .team-member-image {
-    height: 240px;
-  }
-  
-  .time-slots {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Feste "Termin buchen" Button am unteren Bildschirmrand auf mobilen Geräten */
-@media (max-width: 768px) {
-  .mobile-book-button {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 12px;
-    background-color: white;
-    box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: center;
-    z-index: 99;
-  }
-  
-  .mobile-book-button .button {
-    width: 100%;
-    max-width: 280px;
-    margin: 0;
-    padding: 14px 20px;
-    font-size: 16px;
-    text-align: center;
-  }
-  
-  /* Zusätzliche Platz am Ende der Seite für den festen Button */
-  body::after {
-    content: '';
-    display: block;
-    height: 70px;
+  /* Verbesserte Touch-Ziele */
+  .button, .service-option, .gallery-tab, .faq-question {
+    min-height: 44px;
   }
 }
